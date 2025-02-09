@@ -1,10 +1,10 @@
 ﻿# README
 
 ## API & Web Automation Using Cucumber
-API & Web Automation using Selenium Cucumber.
+API & Web UI Automation using Selenium Cucumber.
 
 ## Introduction
-The purpose of this project is to demonstrate API & Web Automation using Selenium Cucumber.
+The purpose of this project is to demonstrate API & Web UI Automation using Selenium Cucumber.
 
 ## Installation
 For installations, here are the steps:
@@ -47,6 +47,10 @@ Terminal with `tags`:
 Terminal:
 1. Open IntelliJ IDEA or any IDE(e.g. VSCode).
 2. Type `./gradlew runAuto`.
+
+Terminal with `tags`:
+1. Open IntelliJ IDEA or any IDE(e.g. VSCode).
+2. Type `./gradlew testWeb -Ptags="tags"`. For instance, `./gradlew tesApi -Ptags=@api` to run only API Test or `./gradlew tesApi -Ptags=@web` to run only Web UI Test
 
 ## Reports
 Reports will be generated as HTML & JSON in `reports` folder that contains `test-report-api.html` and `test-report-api.json` for API, as well as `test-report-web.html` and `test-report-web.json` for Web.
