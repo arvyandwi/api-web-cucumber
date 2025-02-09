@@ -46,7 +46,7 @@ Terminal with `tags`:
 ## How To Run (API & Web)
 Terminal:
 1. Open IntelliJ IDEA or any IDE(e.g. VSCode).
-2. Type `./gradlew runAuto`.
+2. Type `./gradlew runAuto` to run all API & Web UI Tests.
 
 Terminal with `tags`:
 1. Open IntelliJ IDEA or any IDE(e.g. VSCode).
