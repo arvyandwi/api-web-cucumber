@@ -26,7 +26,9 @@ Terminal:
 
 Terminal with `tags`:
 1. Open IntelliJ IDEA or any IDE(e.g. VSCode).
-2. Type `./gradlew tesApi -Ptags="tags"`. For instance, `./gradlew tesApi -Ptags=@api`
+2. Type `./gradlew tesApi -Ptags="tags"`. For instance, `./gradlew tesApi -Ptags=@validte-schema`
+
+When Running the API Test, make sure you haven't created the same user. If you somewhat run only the `Create User` Scenario without deleting the user, you will get an error since the same user has already been created. Run the `Delete User` Scenario separately so you may reset the condition as it is.  
 
 ## How To Run (Web)
 Click  The Run Button on a Feature File or in a runner Class such as `LoginTest.java`.
@@ -39,7 +41,7 @@ Terminal:
 
 Terminal with `tags`:
 1. Open IntelliJ IDEA or any IDE(e.g. VSCode).
-2. Type `./gradlew testWeb -Ptags="tags"`. For instance, `./gradlew tesApi -Ptags=@web`
+2. Type `./gradlew testWeb -Ptags="tags"`. For instance, `./gradlew tesApi -Ptags=@wrong-password`
 
 ## How To Run (API & Web)
 Terminal:
