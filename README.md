@@ -8,9 +8,9 @@ The purpose of this project is to demonstrate API & Web UI Automation using Sele
 
 ## Installation
 For installations, here are the steps:
-1. Create an empty folder/directory in your computer
-2. Open a terminal on a designated folder/directory
-3. Clone the repository using `git clone https://github.com/arvyandwi/api-web-cucumber.git`
+1. Create an empty folder/directory in your computer.
+2. Open a terminal on a designated folder/directory.
+3. Clone the repository using `git clone https://github.com/arvyandwi/api-web-cucumber.git`.
 
 ## Setup & Dependencies
 This Project is currently using `selenium-java: 4.27.0`, `WebDriverManager: 5.9.2` (see [here](https://github.com/bonigarcia/webdrivermanager)), `cucumber-java: 7.20.1` and `junit-jupiter: 5.11.4` on `build.gradle` file. All dependencies are referenced [here](https://mvnrepository.com/).
