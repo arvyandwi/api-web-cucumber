@@ -50,7 +50,7 @@ Terminal:
 
 Terminal with `tags`:
 1. Open IntelliJ IDEA or any IDE(e.g. VSCode).
-2. Type `./gradlew testWeb -Ptags="tags"`. For instance, `./gradlew tesApi -Ptags=@api` to run only API Test or `./gradlew tesApi -Ptags=@web` to run only Web UI Test
+2. Type `./gradlew testWeb -Ptags="tags"`. For instance, `./gradlew tesApi -Ptags=@api` to run only API Test or `./gradlew tesApi -Ptags=@web` to run only Web UI Test.
 
 ## Reports
 Reports will be generated as HTML & JSON in `reports` folder that contains `test-report-api.html` and `test-report-api.json` for API, as well as `test-report-web.html` and `test-report-web.json` for Web.
