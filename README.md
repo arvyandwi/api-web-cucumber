@@ -8,7 +8,7 @@ The purpose of this project is to demonstrate API & Web UI Automation using Sele
 
 ## Installation
 For installations, here are the steps:
-1. Create an empty folder/directory in your computer.
+1. Create an empty folder/directory on your computer.
 2. Open a terminal on a designated folder/directory.
 3. Clone the repository using `git clone https://github.com/arvyandwi/api-web-cucumber.git`.
 
