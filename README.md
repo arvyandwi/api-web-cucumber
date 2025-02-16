@@ -41,7 +41,7 @@ Terminal:
 
 Terminal with `tags`:
 1. Open IntelliJ IDEA or any IDE(e.g. VSCode).
-2. Type `./gradlew testWeb -Ptags="tags"`. For instance, `./gradlew tesApi -Ptags=@wrong-password`
+2. Type `./gradlew testWeb -Ptags="tags"`. For instance, `./gradlew testWeb -Ptags=@wrong-password`
 
 ## How To Run (API & Web)
 Terminal:
