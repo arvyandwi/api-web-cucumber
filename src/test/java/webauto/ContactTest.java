@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = {"webauto"},
-        features = {"src/test/resources/web/login.feature"},
+        features = {"src/test/resources/web/contact.feature"},
         plugin = {"pretty","html:reports/test-report-cucumber-web.html","json:reports/test-report-cucumber-web.json"}
 )
-public class LoginTest {
+public class ContactTest {
 }

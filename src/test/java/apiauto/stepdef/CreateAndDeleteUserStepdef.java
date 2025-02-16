@@ -80,7 +80,8 @@ public class CreateAndDeleteUserStepdef {
 
     @When("I send a GET request with an id {string}")
     public void iSendAGETRequestWithAnId(String id) {
-        response = request.get(endpoint.replace("{id}", id));
+        String storedId = ScenarioContext.getStoredId();
+        response = request.get(endpoint.replace("{id}", storedId));
     }
 
     @And("the response body should match the JSON schema {string}")
