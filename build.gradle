@@ -81,7 +81,7 @@ task testApi() {
             mainClass = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                    '--plugin', 'html:reports/test-report-api.html',
+                    '--plugin', 'html:allure-history',
                     '--plugin', 'pretty',
                     '--glue', 'apiauto',
                     '--tags', "${tags}",

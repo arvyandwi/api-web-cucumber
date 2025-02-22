@@ -25,13 +25,9 @@ public class LoginStepdef extends BasePageObject {
         login = new LoginPage(driver);
     }
 
-    @And("user input username with {string}")
-    public void userInputUsernameWith(String username) {
+    @And("user input username with {string} and password with {string}")
+    public void userInputUsernameWithAndPasswordWith(String username, String password) {
         login.inputUsername(username);
-    }
-
-    @And("user input password with {string}")
-    public void userInputPasswordWith(String password) {
         login.inputPassword(password);
     }
 

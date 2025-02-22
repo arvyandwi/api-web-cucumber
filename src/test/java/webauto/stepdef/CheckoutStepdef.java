@@ -1,6 +1,7 @@
 package webauto.stepdef;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import webauto.BasePageObject;
@@ -18,40 +19,40 @@ public class CheckoutStepdef extends BasePageObject {
     String getItemName;
     String getItemPrice;
 
-    @And("user click the product")
-    public void userClickTheProduct() throws InterruptedException {
+    @Given("user click the product and click add cart")
+    public void userClickTheProductAndClickAddCart() throws InterruptedException {
         home = new HomePage(driver);
+
+        /* Get Product Details */
         this.getItemName = home.getItemName();
         this.getItemPrice = home.getItemPrice();
-        home.selectItem();
-    }
 
-    @And("verify it's the product")
-    public void verifyItsTheProduct() throws InterruptedException {
+        /* Select The Product */
+        home.selectItem();
+
         detail = new ProductDetailPage(driver);
+
+        /* Verify The Product */
         detail.verifyProductName(this.getItemName);
         detail.verifyProductPrice(this.getItemPrice);
-    }
 
-    @And("click add cart")
-    public void clickAddCart() {
+        /* Add To Cart */
         detail.clickAddCart();
     }
 
-    @And("verify popup and confirm")
-    public void verifyPopupAndConfirm() {
+    @And("verify popup confirm and verify product cart is correct")
+    public void verifyPopupConfirmAndVerifyProductCartIsCorrect() throws InterruptedException {
+        /* Verify Success Add To Cart */
         detail.verifySuccessAddToCart();
-    }
 
-    @And("user click navbar cart")
-    public void userClickNavbarCart() {
         navbar = new NavigationBar(driver);
-        navbar.clickCart();
-    }
 
-    @And("verify product cart is correct")
-    public void verifyProductCartIsCorrect() throws InterruptedException {
+        /* Click Cart On Navigation Bar */
+        navbar.clickCart();
+
         cart = new CartPage(driver);
+
+        /* Verify The Product */
         cart.verifyProductName(this.getItemName);
         cart.verifyProductPrice(this.getItemPrice);
     }
@@ -61,29 +62,25 @@ public class CheckoutStepdef extends BasePageObject {
         cart.clickPlaceOrder();
     }
 
-    @And("user input all mandatory payment details")
-    public void userInputAllMandatoryPaymentDetails() throws InterruptedException {
+    @And("user input all mandatory payment details and checkout")
+    public void userInputAllMandatoryPaymentDetailsAndCheckout() throws InterruptedException {
         Thread.sleep(5000);
+
+        /* Input All Mandatory Payment Details */
         cart.inputName();
         cart.inputCountry();
         cart.inputCity();
         cart.inputCardNumber();
         cart.inputMonth();
         cart.inputYear();
-    }
 
-    @And("user click checkout")
-    public void userClickCheckout() {
+        /* Checkout */
         cart.clickPurchase();
     }
 
     @Then("user successfully checkout the product")
-    public void userSuccessfullyCheckoutTheProduct() {
+    public void userSuccessfullyCheckoutTheProduct() throws InterruptedException {
         cart.verifySucessfulCheckout();
-    }
-
-    @And("click confirm")
-    public void clickConfirm() throws InterruptedException {
         Thread.sleep(5000);
         cart.clickConfirmPopup();
     }
