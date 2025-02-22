@@ -64,7 +64,7 @@ jobs:
 
     # Generate Allure Report
     - name: Generate Allure Report
-      run: allure generate build/allure-results --clean -o build/test-report-api.html
+      run: allure generate build/allure-results --clean -o reports/test-report-api.html
 
     # Archive Test Result
     - name: Archive Test Result
