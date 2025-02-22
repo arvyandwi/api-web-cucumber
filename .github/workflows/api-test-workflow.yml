@@ -64,7 +64,7 @@ jobs:
 
     # Generate Allure Report
     - name: Generate Allure Report
-      run: allure generate build/allure-results --clean -o reports/test-report-api.html
+      run: allure generate build/allure-results --clean -o build/allure-report
 
     # Archive Test Result
     - name: Archive Test Result
@@ -72,7 +72,7 @@ jobs:
       if: always()
       with:
         name: API Test Report
-        path: reports/test-report-api.html
+        path: build/allure-report
 
     # Deploy to Github Pages
     - name: Deploy Reports to Github Pages
