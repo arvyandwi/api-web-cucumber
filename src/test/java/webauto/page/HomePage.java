@@ -55,7 +55,8 @@ public class HomePage extends BasePageObject {
         return itemDetails;
     }
 
-    public String getItemName() {
+    public String getItemName() throws InterruptedException {
+        Thread.sleep(5000);
         String productName = driver.findElement(selectedItem).getText();
         return productName;
     }
