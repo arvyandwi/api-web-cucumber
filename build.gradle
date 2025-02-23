@@ -43,7 +43,8 @@ task runAuto() {
             mainClass = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                    '--plugin', 'html:reports/test-report-full.html',
+                    '--plugin', 'json:reports/full/test-report-full.json',
+                    '--plugin', 'html:reports/full/test-report-full.html',
                     '--plugin', 'pretty',
                     '--glue', 'apiauto',
                     '--glue', 'webauto',
@@ -63,7 +64,8 @@ task testWeb() {
             mainClass = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                    '--plugin', 'html:reports/test-report-web.html',
+                    '--plugin', 'json:reports/web/test-report-web.json',
+                    '--plugin', 'html:reports/web/test-report-web.html',
                     '--plugin', 'pretty',
                     '--glue', 'webauto',
                     '--tags', "${tags}",
@@ -81,7 +83,8 @@ task testApi() {
             mainClass = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                    '--plugin', 'html:reports/test-report-api.html',
+                    '--plugin', 'json:reports/api/test-report-api.json',
+                    '--plugin', 'html:reports/api/test-report-api.html',
                     '--plugin', 'pretty',
                     '--glue', 'apiauto',
                     '--tags', "${tags}",
