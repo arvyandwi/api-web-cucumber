@@ -49,7 +49,7 @@ jobs:
       uses: actions/upload-artifact@v4.6.0
       if: always()
       with:
-        name: Web UI Test Report
+        name: API Test Report
         path: reports
 
     # Deploy to Github Pages
